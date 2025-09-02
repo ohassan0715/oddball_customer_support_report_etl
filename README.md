@@ -12,9 +12,7 @@ oddbll_customer_support_report_etl/\
  $$\space$$ $$\space$$ └─ oddball_databricks.py _(Databricks ETL pipeline)_\
  └─ Oddball-ETL-Pipeline.pptx\
  └─ README.md\
- └─ requirements.txt\
-
-
+ └─ requirements.txt
 
 ## 🚀 Usage
 **Option 1: Run Locally (produce CSV/JSON/Parquet)**
