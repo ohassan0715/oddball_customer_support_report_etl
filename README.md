@@ -4,14 +4,17 @@ The pipelines apply deltas month-by-month, validate records, convert timestamps 
 
 ## 📂 Project Structure
 oddbll_customer_support_report_etl/\
- └─ README.md\
- └─ requirements.txt\
+ └─ examples/\
+ $$\space$$ $$\space$$ └─ sample_run_local.sh _(Example local run command)_\
+ $$\space$$ $$\space$$ └─ databricks_job_config.json _(Example Databricks job/task config)_\
  └─ scripts/\
  $$\space$$ $$\space$$ └─ oddball_de.py _(Local CSV/JSON/Parquet ETL pipeline)_\
  $$\space$$ $$\space$$ └─ oddball_databricks.py _(Databricks ETL pipeline)_\
- └─ examples/\
- $$\space$$ $$\space$$ └─ sample_run_local.sh _(Example local run command)_\
- $$\space$$ $$\space$$ └─ databricks_job_config.json _(Example Databricks job/task config)_
+ └─ Oddball-ETL-Pipeline.pptx\
+ └─ README.md\
+ └─ requirements.txt\
+
+
 
 ## 🚀 Usage
 **Option 1: Run Locally (produce CSV/JSON/Parquet)**
