@@ -61,14 +61,29 @@ python scripts/oddball_de.py \
 ## 📝 Report Solution
 This repository also includes the Customer Support Report Exercise, which answers three key questions:
 1) **Question 1: What were the total number of interactions handled by each contact center in Q1 2025?**\
-  Solution: [High-level explanation or reference to processed data]
+Solution:\
+After extracting, and validating, the quarter of the month field created in the customer_support_report view; this was the output for Q1 2025 interactions by Contact Center:
+  * Atlanta GA SE:	8
+  * Richmond VA E:	7
+  * Boston MA NE:	13
+    
 2) **Which month (Jan, Feb, or Mar) had the highest total interaction volume?**\
-  Solution: [High-level explanation or reference to processed data]
-3) **Which contact center had the longest average phone call duration (`total_call_duration`)?**
+Solution:\
+After applying a RANK() window function and ordering by total interactions,\
+**_February was the top ranked month with 10 interactions._**
+
+3) **Which contact center had the longest average phone call duration (`total_call_duration`)?**\
+Solution:\
+Using the RANK() function and dividing the total call duration over total calls,\
+**_Boston was the top ranked contact center with an average 12.72 minute call duration._**
     * Why might this be the case based on the interactions data?\
-      Solution: [High-level explanation or reference to processed data]
+      The initial analysis (timediff formula) discovered Boston was the only contact center to have a time difference between the agent resolution time and the interaction end time.\
+      Since these were also the only records with a value for "Satisfaction Rating,"\
+      **_this concludes that the time difference was allocated to a survey being completed after the interaction was resolved._**
+    
     * What approach would you recommend to measure agent work time more accurately?\
-      Solution: [High-level explanation or reference to processed data]
+      Solution: There is a coaching opportunity for the other contact centers to conduct surveys like Boston does;
+      **_and using the resolution time as the end time for calculating agent work time would be more effective._**
 
 Notes:
 * The report solution leverages the same ETL pipeline logic to ensure consistent results.
