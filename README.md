@@ -4,14 +4,14 @@ The pipelines apply deltas month-by-month, validate records, convert timestamps 
 
 ## 📂 Project Structure
 oddbll_customer_support_report_etl/\
-|__ README.md\
-|__ requirements.txt\
-|__ scripts/\
-|----> oddball_de.py _(Local CSV/JSON/Parquet ETL pipeline)_\
-|----> oddball_databricks.py _(Databricks ETL pipeline)_\
-|__ examples/\
-|----> sample_run_local.sh _(Example local run command)_\
-|----> databricks_job_config.json _(Example Databricks job/task config)_
+ └─ README.md\
+ └─ requirements.txt\
+ └─ scripts/\
+ $$\space$$ $$\space$$ └─ oddball_de.py _(Local CSV/JSON/Parquet ETL pipeline)_\
+ $$\space$$ $$\space$$ └─ oddball_databricks.py _(Databricks ETL pipeline)_\
+ └─ examples/\
+ $$\space$$ $$\space$$ └─ sample_run_local.sh _(Example local run command)_\
+ $$\space$$ $$\space$$ └─ databricks_job_config.json _(Example Databricks job/task config)_
 
 ## 🚀 Usage
 **Option 1: Run Locally (produce CSV/JSON/Parquet)**
@@ -55,6 +55,22 @@ python scripts/oddball_de.py \
 * Ensures no nulls in primary keys.
 * Logs warnings if duplicates are found.
 * Applies deltas in order (delete, update, add).
+
+## 📝 Report Solution
+This repository also includes the Customer Support Report Exercise, which answers three key questions:
+1) **Question 1: What were the total number of interactions handled by each contact center in Q1 2025?**\
+  Solution: [High-level explanation or reference to processed data]
+2) **Which month (Jan, Feb, or Mar) had the highest total interaction volume?**\
+  Solution: [High-level explanation or reference to processed data]
+3) **Which contact center had the longest average phone call duration (`total_call_duration`)?**
+    * Why might this be the case based on the interactions data?\
+      Solution: [High-level explanation or reference to processed data]
+    * What approach would you recommend to measure agent work time more accurately?\
+      Solution: [High-level explanation or reference to processed data]
+
+Notes:
+* The report solution leverages the same ETL pipeline logic to ensure consistent results.
+* Outputs can be viewed as CSV, JSON, or Parquet files locally, or queried directly in Databricks Unity Catalog tables.
 
 ## 📌 Notes
 * Use oddball_de.py for local testing, CSV/JSON/Parquet outputs.
