@@ -1,0 +1,42 @@
+{
+  "name": "Create Oddball Tables",
+  "email_notifications": {
+    "on_success": [
+      "ohassan0715@gmail.com"
+    ],
+    "on_failure": [
+      "ohassan0715@gmail.com"
+    ],
+    "no_alert_for_skipped_runs": false
+  },
+  "webhook_notifications": {},
+  "notification_settings": {
+    "no_alert_for_skipped_runs": false,
+    "no_alert_for_canceled_runs": true
+  },
+  "timeout_seconds": 0,
+  "max_concurrent_runs": 1,
+  "tasks": [
+    {
+      "task_key": "Table_-_Overwrite_Oddball_Tables",
+      "run_if": "ALL_SUCCESS",
+      "notebook_task": {
+        "notebook_path": "/Workspace/Users/ohassan0715@gmail.com/oddball_de",
+        "base_parameters": {
+          "catalog_db": "workspace.oddball_custom"
+        },
+        "source": "WORKSPACE"
+      },
+      "timeout_seconds": 0,
+      "email_notifications": {},
+      "webhook_notifications": {}
+    }
+  ],
+  "queue": {
+    "enabled": true
+  },
+  "performance_target": "STANDARD",
+  "run_as": {
+    "user_name": "ohassan0715@gmail.com"
+  }
+}
